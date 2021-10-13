@@ -83,11 +83,6 @@ button{
   color: #fff;
 }
 
-/* Class Selector */
-.partnerHeading{
-  background-color: yellow;
-  color: #000;
-}
 
 .copyrightTxt{
   background-color: yellow;
@@ -136,4 +131,29 @@ header .mainHeader{
   border-radius: 2px;
   text-transform: uppercase;
   margin-top:30px;
+}
+
+footer{
+  text-align: center;
+  padding: 60px 0 0;
+  border-top: 1px solid #ccc;
+}
+
+.copyrightTxt{
+  padding: 20px 10px;
+  margin-top:20px;
+}
+
+#partnerArea{
+  text-align: center;
+}
+
+#partnerArea img{
+  margin: 10px 50px;
+}
+
+#c2a{
+  padding: 60px 0;
+  text-align: center;
+  border-top: solid 1px #ccc;
 }
