@@ -1,5 +1,11 @@
 /* External Styles */
 
+/* Embedding Font */
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/fonts/Rubik/static/Rubik-Regular.ttf") format("truetype");
+}
+
 /* Resetting Browser style using reset css */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -53,7 +59,11 @@ table {
 
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Rubik, Helvetica, sans-serif;
+}
+
+.hamburgerIcon{
+  display: none;
 }
 
 /* Element Selector */
@@ -75,6 +85,9 @@ button{
   border-width: 1px;
   border-style: solid;
   border-color: #fff;
+  font-family: Rubik;
+  font-weight: bold;
+
 }
 
 /* Class Selector */
@@ -82,7 +95,6 @@ button{
   background-color: green;
   color: #fff;
 }
-
 
 .copyrightTxt{
   background-color: yellow;
@@ -156,4 +168,137 @@ footer{
   padding: 60px 0;
   text-align: center;
   border-top: solid 1px #ccc;
+}
+
+#mainContactArea{
+  width: 84%;
+  margin: 0 8%;
+}
+
+.contactArea{
+  display: flex;
+}
+
+.contactArea .contactWapper{
+  width:70%;
+}
+
+.contactArea .sidebar{
+  width: 30%;
+}
+
+.contactWapper form{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contactWapper form input, .contactWapper form select, .contactWapper form textarea{
+  padding: 10px 14px;
+  width: 260px;
+  border-radius: 3px;
+  border-width: 1px;
+  margin-top: 10px;
+}
+
+.contactWapper form label{
+  display: inline-block;
+  margin-top: 25px;
+}
+
+/* Attribute selector */
+.contactWapper form input[type='text']{
+  border: solid 1px #ccc;
+}
+
+.formFields{
+  display: inline-block;
+  width:49%;
+}
+
+blockquote{
+  font-size: 1.4em;
+  width:60%;
+  margin:50px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  color: #555555;
+  padding:1.2em 30px 1.2em 75px;
+  line-height:1.6;
+  position: relative;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#78C0A8;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote footer{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+.roundedImg{
+  border-radius: 50%;
+  border:solid 5px #00aeff;
+  background-color: #00aeff;
+  padding: 0;
+  margin:0;
+}
+
+/* Responsive Web Design */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color:yellow;
+  }
+
+  #primaryMenu{
+    display: none;
+  }
+  
+  .hamburgerIcon{
+    display: inline;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    background-color:red;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    background-color:greenyellow;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    background-color:lightskyblue;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color:lightpink;
+  }
 }
