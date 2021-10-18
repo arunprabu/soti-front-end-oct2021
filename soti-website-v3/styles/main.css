@@ -1,5 +1,6 @@
+
 .heroArea{
-  background:#0074AA url("../assets/images/may-2021-laptop-banner.png") no-repeat ;
+  background:bgColor url("../assets/images/may-2021-laptop-banner.png") no-repeat ;
   height: 563px;
 }
 
@@ -10,13 +11,13 @@
 }
 
 .btn-outline-soti{
-  border: solid 1px #fff !important;
-  color: #fff;
+  border: solid 1px bdrColor !important;
+  color: txtColor;
   background: transparent;
 }
 
 .btn-outline-soti:hover{
   background: #fff;
-  border: solid 1px #fff !important;
-  color: #0074AA;
+  border: solid 1px bdrColor !important;
+  color: bgColor;
 }
