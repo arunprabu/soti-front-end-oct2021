@@ -1,0 +1,18 @@
+{
+  "name": "npm-demo",
+  "version": "1.0.0",
+  "description": "my first npm demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arun",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  },
+  "devDependencies": {
+    "@angular/cli": "^12.2.10",
+    "typescript": "^4.4.4"
+  }
+}
