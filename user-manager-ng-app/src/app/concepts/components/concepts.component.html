@@ -61,7 +61,45 @@
     <div class="tab-pane fade" id="directives-tab" role="tabpanel" aria-labelledby="directives-tab">
       <h2>Directives</h2>
 
+      <pre>
+        Directives
+        ---
+          Spl Instruction DOM 
+
+          1. Attribute Directives
+            Examples: routerLink, routerLinkActive 
+
+          2. Structural Directives 
+              *ngIf, *ngFor, ngSwitch 
+
+
+          3. Custom Attribute Directives
+          4. Custom Structural Directives
+      </pre>
+
+      <div class="alert alert-success" *ngIf="isLoggedIn;else NotAuthContainer">
+        You are authenticated.
+      </div>
+      <ng-template #NotAuthContainer>
+        <div class="alert alert-danger">
+          You are not authenticated.
+        </div>
+      </ng-template>
+
+      <ul>
+        <li *ngFor="let skill of skillList">{{skill}}</li>
+        <!-- TODO: learn about finding index -->
+      </ul>
      
+      <hr>
+      <h4>Custom Attribute Directives</h4>
+
+      <div appColorizer>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos sunt consequatur iste, voluptas tempora, vitae magnam perferendis facere quis sed fuga reiciendis! Iure reprehenderit commodi dolorum voluptatum qui accusamus? Voluptates?
+
+        <button>Click Me</button>
+      </div>
+
     </div>
 
 
