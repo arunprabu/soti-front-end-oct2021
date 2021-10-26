@@ -16,6 +16,7 @@ import { CebComponent } from './concepts/components/ceb/ceb.component';
 import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 import { AddUserComponent } from './users/components/add-user/add-user.component';
 import { UserDetailsComponent } from './users/components/user-details/user-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Decorator
 // Main Switching Box
@@ -39,7 +40,8 @@ import { UserDetailsComponent } from './users/components/user-details/user-detai
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule // Needed for Reactive Forms - - FormGroup
+    ReactiveFormsModule, // Needed for Reactive Forms - - FormGroup
+    HttpClientModule
   ],
   providers: [],
   // AppModule should in turn be bootstrapped with a comp - AppComponent
