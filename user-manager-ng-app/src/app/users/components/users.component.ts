@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { User } from '../models/user';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -7,9 +8,9 @@ import { UserService } from '../services/user.service';
   styles: [
   ]
 })
-export class UsersComponent implements OnInit {
+export class UsersComponent implements OnInit, OnDestroy {
 
-  userList: any[] = [];
+  userList: User[] = [];
 
   constructor( private userService: UserService) {  // 1. connect with service
     console.log("Inside Constructor");
@@ -22,10 +23,21 @@ export class UsersComponent implements OnInit {
 
     // 2. send the request to the service 
     this.userService.getUsers()
-      .subscribe( (res: any) => { // 3. get the resp from the service
+      .subscribe( (res: User[]) => { // 3. get the resp from the service
         console.log(res);
         this.userList = res;
       });
   }
+
+  ngOnDestroy():void{
+    // called when the comp is going out of the view.
+    console.log('Into Destroy');
+    // ideal place for you unsubscribe, clear the data, clear the timeout, clear the intervals
+
+    if(this.userList && this.userList.length > 0){
+      this.userList.length = 0;
+    }
+  }
+
 
 }
