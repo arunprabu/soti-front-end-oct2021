@@ -14,7 +14,7 @@ export class UserService {
   }
 
   // create
-  createUser( formData: any): Observable<User>{ // 1. get the form data from the comp ts 
+  createUser( formData: User): Observable<User>{ // 1. get the form data from the comp ts 
     console.log(formData); // submittable form data
   
     // 2. send the data to the REST API 

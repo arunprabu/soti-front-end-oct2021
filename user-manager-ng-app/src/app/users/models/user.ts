@@ -2,7 +2,7 @@
 import { Injectable } from "@angular/core";
 
 interface IUser{
-  id: number;
+  id?: number;
   name: string;
   phone: string;
   email: string;
