@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
+import { AboutComponent } from './about/components/about.component';
+import { LoginComponent } from './auth/components/login/login.component';
+import { SignupComponent } from './auth/components/signup/signup.component';
 import { ConceptsComponent } from './concepts/components/concepts.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home/components/home.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { AuthGuard } from './shared/guards/auth.guard';
 
 // Config the routes 
 const routes: Routes = [
@@ -11,13 +15,18 @@ const routes: Routes = [
   { path: 'concepts', component: ConceptsComponent },
   {
     path: 'users',
-    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule),
+    canActivate: [ AuthGuard ]
   },
   {
     path: 'products',
-    loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
+    loadChildren: () => import('./products/products.module').then(m => m.ProductsModule),
+    canActivate: [ AuthGuard ]
   },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

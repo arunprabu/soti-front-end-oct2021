@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { User } from '../models/user';
 import { Observable } from 'rxjs';
+
+/// custom imports
+import { User } from '../models/user';
 
 // Decorator
 @Injectable({
